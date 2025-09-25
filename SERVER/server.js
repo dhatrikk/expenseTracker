@@ -20,12 +20,6 @@ app.use("/api/v1/USER", require("./routes/userRoute.js"));
 
 app.use("/api/v1/transactions",require("./routes/transactionRoutes.js"));
 
-app.use(express.static(path.join(__dirname,"./client/build")));
-
-app.get("*", function (req,res) {
-    res.sendFile(path.join(__dirname,"./client/build/index.html"));
-})
-
 
 const PORT = process.env.PORT || 8000;
 
