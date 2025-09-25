@@ -7,13 +7,17 @@ const path = require("path");
 
 dotenv.config();
 
+app.use(cors({
+  origin: "https://expensestrak.vercel.app",
+  credentials: true
+}));
+
 connectDB();
 
 const app = express();
 
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(cors());
 
 
 app.use("/api/v1/USER", require("./routes/userRoute.js"));
