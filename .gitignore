@@ -1,0 +1,45 @@
+# ─────────────────────────────
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE configs
+.vscode/
+.idea/
+*.iml
+
+# ─────────────────────────────
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─────────────────────────────
+# Environment variables
+.env
+.env.*.local
+CLIENT/.env
+CLIENT/.env.*.local
+SERVER/.env
+SERVER/.env.*.local
+
+# ─────────────────────────────
+# Dependencies
+node_modules/
+CLIENT/node_modules/
+SERVER/node_modules/
+
+# ─────────────────────────────
+# Build / Dist folders
+dist/
+build/
+CLIENT/dist/
+CLIENT/build/
+SERVER/dist/
+SERVER/build/
+
+# ─────────────────────────────
+# Misc
+*.lock
