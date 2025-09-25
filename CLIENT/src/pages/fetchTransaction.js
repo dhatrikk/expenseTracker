@@ -24,7 +24,7 @@ const FetchTransaction = () => {
     try {
       const currentUser = JSON.parse(localStorage.getItem("user"));
       const response = await axios.post(
-        "/api/v1/transactions/get-transactions",
+        `${process.env.REACT_APP_Backend_url}/api/v1/transactions/get-transactions`,
         {
           idToBeFetched: currentUser._id,
           frequency,

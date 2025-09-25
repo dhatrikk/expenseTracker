@@ -27,7 +27,7 @@ const AddTransaction = () => {
     e.preventDefault();
     try {
       const currentUser = JSON.parse(localStorage.getItem("user"));
-      await axios.post("/api/v1/transactions/add-transaction", { userid: currentUser._id, ...formData });
+      await axios.post(`${process.env.REACT_APP_Backend_url}/api/v1/transactions/add-transaction`, { userid: currentUser._id, ...formData });
       
       setFormData({
         amount: "",

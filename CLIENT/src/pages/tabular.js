@@ -6,7 +6,7 @@ import "./tabular.css";
 const Tabular = ({ transactions }) => {
   const deleteHandler = async (id) => {
     try {
-      await axios.delete(`/api/v1/transactions/delete-transaction/${id}`);
+      await axios.delete(`${process.env.REACT_APP_Backend_url}/api/v1/transactions/delete-transaction/${id}`);
       alert("Transaction deleted successfully!");
     } catch (error) {
       console.error("Error deleting transaction:", error);
