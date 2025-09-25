@@ -6,12 +6,12 @@ const connectDB = require("./config/connectDB.js");
 
 dotenv.config();
 
-// Initialize express app **first**
+// Initialize express app first
 const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: "https://expensestrak.vercel.app", // frontend domain
+  origin: "https://expensestrak.vercel.app", // your frontend domain
   credentials: true
 }));
 app.use(express.json());
