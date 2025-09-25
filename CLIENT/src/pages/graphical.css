@@ -1,0 +1,109 @@
+/* General Container */
+.graphical-container {
+  padding: 20px;
+}
+
+/* Flex container for Transaction & Turnover sections */
+.graph-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Graph Cards */
+.graph-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 280px; /* Prevents collapsing on small screens */
+}
+
+/* Progress Circles Alignment */
+.progress-summary {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+/* Category Cards Container */
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Category Cards */
+.category-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+}
+
+/* Income & Expense Text */
+.income-text {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.expense-text {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Category Item Styling */
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .graph-row {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center;
+  }
+
+  .progress-summary {
+    flex-direction: column; /* Align progress bars vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-row,
+  .category-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .graph-card,
+  .category-card {
+    width: 100%; /* Full width for better stacking */
+  }
+}
+
+@media (max-width: 480px) {
+  .graphical-container {
+    padding: 10px;
+  }
+
+  .graph-card {
+    padding: 15px;
+  }
+
+  .progress-summary {
+    gap: 5px;
+  }
+}
