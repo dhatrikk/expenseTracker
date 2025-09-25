@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 connectDB();
 
 // Routes
-app.use("/api/v1/USER", require("./routes/userRoute.js"));
+app.use("/api/v1/usr", require("./routes/userRoute.js"));
 app.use("/api/v1/transactions", require("./routes/transactionRoutes.js"));
 
 // Start server

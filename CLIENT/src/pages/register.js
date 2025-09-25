@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post(`/api/v1/USER/register`, formData);
+      await axios.post(`/api/v1/user/register`, formData);
 
       
       alert(`Registration Successful!\nName: ${formData.name}`);
