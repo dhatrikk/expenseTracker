@@ -20,7 +20,7 @@ const navigate = useNavigate();
     e.preventDefault();
 
     try {
-      const {data} = await axios.post(`/api/v1/user/login`, formData);
+      const {data} = await axios.post(`${process.env.REACT_APP_Backend_url}/api/v1/user/login`, formData);
       alert(`Login Successful!\nEmail: ${formData.email}`);
       localStorage.setItem("user",JSON.stringify({...data.user,password:""}));
       navigate("/");
